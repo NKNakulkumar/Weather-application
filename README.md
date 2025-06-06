@@ -1,3 +1,3 @@
 # Wheather application
-this is an extereme awesome weather application
+this is an extereme awesome weather application and it is good
 
