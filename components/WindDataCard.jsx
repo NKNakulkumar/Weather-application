@@ -55,10 +55,10 @@ export default function WindChart({ windSpeed }) {
     currentSpeed > 0 ? Math.max(1, 4 - currentSpeed / 10) : 3;
 
   const CustomTooltip = ({ active, payload }) => {
-    if (active && payload?.[0]) {
+   if (active && payload?.[0]) {
       return (
-        <div className="bg-slate-900/95 backdrop-blur-md px-4 py-2 rounded-xl border border-purple-500/50 shadow-2xl">
-          <p className="text-purple-200 font-bold text-sm">
+        <div className="bg-slate-900/95 backdrop-blur-md px-3 py-2 rounded-lg border border-purple-500/50 shadow-2xl">
+          <p className="text-purple-200 font-bold text-xs sm:text-sm">
             {payload[0].value} km/h
           </p>
           {payload[0].payload.time && (
@@ -71,10 +71,9 @@ export default function WindChart({ windSpeed }) {
     }
     return null;
   };
-
   return (
-    <div className="w-full max-w-sm mx-auto transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-      <div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 rounded-3xl p-5 shadow-2xl border border-slate-700/50 overflow-hidden">
+    <div className="w-full max-w-md mx-auto transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+      <div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 rounded-3xl p-4  shadow-2xl border border-slate-700/50 overflow-hidden">
         <div className="absolute inset-0 opacity-33">
           <div
             className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/25 to-transparent"
@@ -101,7 +100,7 @@ export default function WindChart({ windSpeed }) {
             <h2 className="text-xl font-bold text-white tracking-wide">Wind</h2>
           </div>
 
-          <div className="h-36 -mx-2 relative overflow-hidden">
+          <div className="h-35 -mx-2 relative overflow-hidden">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart
                 data={chartData}

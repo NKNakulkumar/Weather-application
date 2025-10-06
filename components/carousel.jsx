@@ -31,7 +31,8 @@ const formatTime = (unixTimestamp) => {
           <button onClick={() => scroll('left')} className="btn btn-sm btn-circle bg-[#1a1d3a] text-white border-none hover:bg-[#2a2d4a]">❮</button>
            <button
     onClick={() => scroll('right')}
-    className="btn btn-sm btn-circle absolute mr-8 right-0 bg-[#1a1d3a] text-white border-none hover:bg-[#2a2d4a]"
+   className="btn btn-sm btn-circle absolute mr-10fggfvvfgededfvrfgbbnerfghgerfgerfg sm:mr-14 right-0 bg-[#1a1d3a] text-white border-none hover:bg-[#2a2d4a]"
+
   >
     ❯
   </button>

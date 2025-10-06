@@ -56,23 +56,22 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
   const metricInfo = getMetricInfo(label);
 
   return (
-  <div className="w-full max-w-xs mx-auto  transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ">
-      <div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 rounded-2xl p-6 shadow-2xl border border-slate-700/50">
-        
-        {/* Header */}
-        <div className="flex items-center justify-between mb-5 ">
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {metricInfo.icon}
-            </svg>
-            <span className="text-white font-medium text-sm">{label}</span>
-          </div>
-          <span className="text-slate-400 text-sm font-medium">{level}</span>
-        </div>
+  <div className="w-full max-w-md mx-auto transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+  <div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 rounded-2xl p-5 sm:p-8 shadow-2xl border border-slate-700/50">
+    {/* Header */}
+    <div className="flex items-center justify-between mb-4 sm:mb-8">
+      <div className="flex items-center gap-2">
+        <svg className="w-4 h-4 sm:w-7 sm:h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {metricInfo.icon}
+        </svg>
+        <span className="text-white font-medium text-base sm:text-lg">{label}</span>
+      </div>
+      <span className="text-slate-400 text-base sm:text-lg font-medium">{level}</span>
+    </div>
 
         {/* Radial Progress */}
-        <div className="flex justify-center">
-          <div className="relative w-28 h-32">
+        <div className="flex justify-center mt-10 ">
+          <div className="relative w-26 h-24 sm:w-36 sm:h-33">
             {/* Subtle purple glow background */}
             <div className="absolute inset-0  bg-purple-600/10 rounded-full blur-xl"></div>
             
