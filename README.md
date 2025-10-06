@@ -2,7 +2,7 @@
 
 A beautiful, real-time weather application built with Next.js that provides accurate weather forecasts, temperature tracking, and detailed meteorological data for cities worldwide.
 
-![Weather App Screenshot](./public/screenshot.png)
+![Weather App Screenshot](https://cdn.dribbble.com/userupload/5015400/file/original-c61751cdfbfdaf884a0cc8493917fc1d.png?resize=1600x1200)
 
 ---
 
