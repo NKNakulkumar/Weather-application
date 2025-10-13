@@ -20,7 +20,7 @@ A beautiful, real-time weather application built with Next.js that provides accu
 ---
 
 
-## ✨ Features
+## ✨ Features 
 
 - **Real-Time Weather Data** - Get up-to-date weather information for any city globally
 - **5-Day Forecast** - View detailed weather predictions for the upcoming week
