@@ -5,7 +5,7 @@ A beautiful, real-time weather application built with Next.js that provides accu
 ![Weather App Screenshot](https://cdn.dribbble.com/userupload/5015400/file/original-c61751cdfbfdaf884a0cc8493917fc1d.png?resize=1600x1200)
  
 ---
-
+ 
 ## 📋 Table of Contents
 - [Features](#features)
 -  [Live Demo](#LiveDemo)
