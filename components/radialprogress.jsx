@@ -133,7 +133,6 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
                 opacity="0.3"
               />
             </svg>
-            
             {/* Percentage text */}
              <div className="absolute inset-0 flex items-center justify-center">
               <span className={`text-2xl font-bold bg-gradient-to-br ${metricInfo.color} bg-clip-text text-transparent drop-shadow-lg`}>
