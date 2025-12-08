@@ -15,12 +15,8 @@ export default function WeatherForecast({ weatherData }) {
   return (
    <div className="  bg-[#0b0f2f] flex items-center justify-center p-4">
   <div className="w-full max-w-sm relative">
-    {/* Glowing backdrop */}
     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
-    
-    {/* Main card */}
     <div className="relative bg-[#1b1e3c] backdrop-blur-xl rounded-2xl p-5 shadow-2xl border border-white/10">
-      {/* Header */}
       <div className="mb-5">
         <h2 className="text-2xl font-bold text-white mb-1 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text ">
           Weather Forecast
@@ -35,7 +31,7 @@ export default function WeatherForecast({ weatherData }) {
             key={index}
             className="group relative bg-gradient-to-r from-slate-700/40 to-slate-800/40 hover:from-slate-700/60 hover:to-slate-800/60 rounded-xl p-3 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl border border-white/5 hover:border-white/10"
           >
-            {/* Hover glow effect */}
+            
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 rounded-xl transition-all duration-300"></div>
             
             <div className="relative flex items-center justify-between">
@@ -65,7 +61,7 @@ export default function WeatherForecast({ weatherData }) {
         ))}
       </div>
 
-      {/* Footer accent */}
+     
       <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-500">
         <span>Updated just now</span>
         <span className="flex items-center gap-1">

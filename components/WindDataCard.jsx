@@ -6,7 +6,7 @@ export default function WindChart({ windSpeed }) {
   const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
-    // Handle both number and object inputs
+  
     if (typeof windSpeed === "number" || typeof windSpeed === "string") {
       const speed = parseFloat(windSpeed) || 0;
       setCurrentSpeed(speed);

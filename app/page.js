@@ -5,7 +5,6 @@ import Navbar from "@/components/navbar";
 import AnimatedRadialProgress from "@/components/radialprogress";
 import TempChart from "@/components/recharts";
 import axios from "axios";
-// import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import WindChart from "@/components/WindDataCard";
 import WeatherForecast from "@/components/Weatherforecast";
@@ -13,16 +12,13 @@ import WeatherForecast from "@/components/Weatherforecast";
 
 export default function Home() {
   const [data, setdata] = useState([]);
-  const [search, setsearch] = useState("London");
+  const [search, setsearch] = useState("Paris");
   const [chartData, setChartData] = useState([]);
   const[forecast,setforcast]=useState([])
   const [weatherData, setWeatherData] = useState([]);
   const [loading, setLoading] = useState(true);
   const apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
-  // const searchparam = useSearchParams();
-  // const username = searchparam.get();
 
-  //
 const weather = data?.list?.[0]?.weather?.[0];
   const iconUrl = weather?.icon
     ? `https://openweathermap.org/img/wn/${weather.icon}@2x.png`
@@ -142,8 +138,6 @@ console.log('Today + 7 Days Data:', allDays);
       : "Time not available";
 
 //rain
-
-//
   const city = data?.city?.name;
   const country = data?.city?.country;
   const temp =
@@ -151,14 +145,13 @@ console.log('Today + 7 Days Data:', allDays);
       ? Math.round(data.list[0].main.temp)
       : null;
 // wind speed -
-const windSpeedMs = data?.list?.[0]?.wind?.speed;
+// const windSpeedMs = data?.list?.[0]?.wind?.speed;
 const windSpeedKmh = data?.list?.[0]?.wind?.speed 
   ? (data.list[0].wind.speed * 3.6).toFixed(1) 
   : null;
   const dt = 1753358400; // example Unix timestamp in seconds
   const date = new Date(dt * 1000); // convert to milliseconds
-  // const formatted = format(date, "EEEE/dd/yyyy");
-  
+ 
   //
   const todayForecast = data?.list?.[0];
   const todayDate = todayForecast?.dt
@@ -169,10 +162,6 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
     todayDate instanceof Date && !isNaN(todayDate)
       ? format(todayDate, "dd MMM yyyy")
       : "Loading date...";
-
-  // const formattedTime = todayDate
-  //   ? format(todayDate, "h:mm a")
-  //   : "Loading time...";
 
   // radal
   const latest = weatherData[0] || { rain: 0, humidity: 0, pressure: 0 };
@@ -187,14 +176,12 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
     country={country}
   />
   
-  {/* Main Content */}
+ 
   <div className="w-full flex flex-col lg:flex-row gap-4 lg:gap-6 mt-4">
-    {/* Left Section */}
     <div className="w-full lg:w-[60%] flex flex-col gap-4 lg:gap-6">
-      {/* Weather Info Box */}
       <div className="w-full p-4 sm:p-6 bg-[#1A1A40] rounded-xl shadow-lg text-white">
         <div className="weather-info">
-          {/* Temperature Display */}
+
           <div className="flex gap-4 items-center">
             {iconUrl ? (
               <img src={iconUrl} className="w-12 h-12 sm:w-16 sm:h-16" alt="weather" />
@@ -216,7 +203,7 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
               : "NA"}°C
           </span>
 
-          {/* Chart Section - Responsive positioning */}
+       
           <div className="mt-6 lg:float-right lg:-mt-32 w-full lg:max-w-sm">
             <div className="w-full h-32 sm:h-40">
               <TempChart data={chartData} />
@@ -226,7 +213,7 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
 
 
 
-            {/* Weather Stats */}
+           
             <div className="flex justify-around text-center text-sm sm:text-md py-4">
               <div className="flex flex-col items-center">
                 <span className="text-base sm:text-lg">🌧️</span>
@@ -251,7 +238,7 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
           </div>
         </div>
 
-        {/* Min/Max Temp */}
+        
         <div className="mt-6">
           <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm">
             <div className="flex items-center gap-1 font-bold">
@@ -269,7 +256,7 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
         </div>
       </div>
 
-      {/* Cards Section */}
+  
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 w-full mx-auto p-4 sm:p-4  ">
   <div className="w-full min-w-0">
     <WindChart windSpeed={windSpeedKmh} />
@@ -301,7 +288,7 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
 </div>
     </div>
 
-    {/* Right Section */}
+  
     <div className="w-full lg:w-[40%] bg-[#0b0f2f] rounded-xl p-4">
       <h1 className="text-center text-base sm:text-2xl md:text-2xl  font-semibold drop-shadow-md text-white mb-4">
         This week

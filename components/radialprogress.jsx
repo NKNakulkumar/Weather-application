@@ -21,7 +21,7 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
     return () => clearInterval(timer);
   }, [value, duration]);
 
-  // Get appropriate icon and unit based on label
+ 
   const getMetricInfo = (label) => {
     switch (label.toLowerCase()) {
       case 'rain chance':
@@ -72,20 +72,20 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
         {/* Radial Progress */}
         <div className="flex justify-center mt-10 ">
           <div className="relative w-26 h-24 sm:w-36 sm:h-33">
-            {/* Subtle purple glow background */}
+        
             <div className="absolute inset-0  bg-purple-600/10 rounded-full blur-xl"></div>
             
-            {/* SVG Circle */}
+        
             <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
               <defs>
-                {/* Gradient for the progress ring */}
+             
                 <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#6b21a8" />
                   <stop offset="50%" stopColor="#7c3aed" />
                   <stop offset="100%" stopColor="#9333ea" />
                 </linearGradient>
                 
-                {/* Sharp edge glow filter */}
+            
                 <filter id="sharpGlow">
                   <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
                   <feComposite in="coloredBlur" in2="SourceAlpha" operator="in" result="clipped"/>
@@ -107,7 +107,7 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
                 strokeWidth="6"
               />
               
-              {/* Progress circle with square edges */}
+              
               <circle
                 cx="50"
                 cy="50"
@@ -122,7 +122,7 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
                 className="transition-all duration-1000 ease-out"
               />
               
-              {/* Inner shadow effect for depth */}
+              
               <circle
                 cx="50"
                 cy="50"
