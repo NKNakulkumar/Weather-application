@@ -25,6 +25,7 @@ export default function TempChart({data}) {
         tickMargin={10}
         interval={0}
         tick={{ fontSize: 12 }}
+        fontWeight={600}
       />
       <Tooltip 
         contentStyle={{
