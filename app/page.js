@@ -258,7 +258,7 @@ const windSpeedKmh = data?.list?.[0]?.wind?.speed
 
   
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 w-full mx-auto p-4 sm:p-4  ">
-  <div className="w-full min-w-0">
+  <div className="w-full min-h-full">
     <WindChart windSpeed={windSpeedKmh} />
   </div>
   <div className="w-full min-w-0">

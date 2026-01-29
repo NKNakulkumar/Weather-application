@@ -83,17 +83,6 @@ export default function WindChart({ windSpeed }) {
           ></div>
         </div>
 
-        <style jsx>{`
-          @keyframes flowBg {
-            0%,
-            100% {
-              transform: translateX(-100%) skewX(-12deg);
-            }
-            50% {
-              transform: translateX(100%) skewX(-12deg);
-            }
-          }
-        `}</style>
 
         <div className="relative z-10">
           <div className="flex items-center gap-3">

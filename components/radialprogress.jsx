@@ -114,7 +114,7 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
                 r="45"
                 fill="none"
                 stroke="url(#progressGradient)"
-                strokeWidth="12"
+                strokeWidth="10"
                 strokeLinecap="butt"
                 strokeDasharray={circumference}
                 strokeDashoffset={circumference - progress}
