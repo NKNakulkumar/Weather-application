@@ -50,8 +50,9 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
         };
     }
   };
-
-  const circumference = 2 * Math.PI * 45;
+  const strokeWidth = 12;
+  const radius = 50 - strokeWidth / 2; // 44
+  const circumference = 2 * Math.PI * radius;
   const progress = (animatedValue / 100) * circumference;
   const metricInfo = getMetricInfo(label);
 
@@ -101,7 +102,7 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
               <circle
                 cx="50"
                 cy="50"
-                r="45"
+                r={radius}
                 fill="none"
                 stroke="#1e293b"
                 strokeWidth="6"
@@ -111,10 +112,10 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
               <circle
                 cx="50"
                 cy="50"
-                r="45"
+                r={radius}
                 fill="none"
                 stroke="url(#progressGradient)"
-                strokeWidth="10"
+                strokeWidth="12"
                 strokeLinecap="butt"
                 strokeDasharray={circumference}
                 strokeDashoffset={circumference - progress}
@@ -126,7 +127,7 @@ const AnimatedRadialProgress = ({ value = 0, label = "Progress", level = "Low", 
               <circle
                 cx="50"
                 cy="50"
-                r="39"
+                r={radius - strokeWidth / 2}
                 fill="none"
                 stroke="#000"
                 strokeWidth="1"
